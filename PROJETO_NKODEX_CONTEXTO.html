@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projeto Nkodex — Contexto</title>
+  <style>
+    @page { margin: 18mm 16mm; }
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #111827;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    h1 { font-size: 22pt; color: #1d4ed8; border-bottom: 2px solid #2563eb; padding-bottom: 8px; margin-top: 0; }
+    h2 { font-size: 14pt; color: #1e40af; margin-top: 24px; page-break-after: avoid; }
+    h3 { font-size: 12pt; color: #334155; margin-top: 16px; }
+    blockquote { border-left: 4px solid #2563eb; margin: 12px 0; padding: 8px 16px; background: #eff6ff; color: #1e3a8a; }
+    code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 9pt; }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 8.5pt;
+      line-height: 1.4;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    pre code { background: transparent; color: inherit; padding: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 9.5pt; }
+    th, td { border: 1px solid #cbd5e1; padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: #2563eb; color: #fff; }
+    tr:nth-child(even) td { background: #f8fafc; }
+    ul, ol { padding-left: 22px; }
+    li { margin: 4px 0; }
+    hr { border: none; border-top: 1px solid #e2e8f0; margin: 20px 0; }
+    a { color: #2563eb; }
+  </style>
+</head>
+<body>
+<h1>Projeto Nkodex — Contexto para continuidade</h1>
+<blockquote>
+<p><strong>Última atualização:</strong> 29 de maio de 2026<br><strong>Pasta do projeto (disco):</strong> <code>C:\Users\mari_\Projects\nkodex</code><br><strong>Marca definitiva:</strong> Nkodex<br><strong>Nome do pacote npm:</strong> <code>nkodex</code></p>
+</blockquote>
+<p>Este documento consolida decisões, estrutura e pendências para que qualquer pessoa (ou agente de IA) possa retomar o projeto sem perder contexto.</p>
+<hr>
+<h2>1. Objetivo do site</h2>
+<p>Construir um <strong>site institucional B2B</strong> para divulgar uma empresa de <strong>desenvolvimento de sistemas, aplicativos e soluções personalizadas</strong>.</p>
+<h3>Objetivos de negócio</h3>
+<ul>
+<li>Comunicar <strong>o que a empresa faz</strong> em linguagem clara (não excessivamente técnica).</li>
+<li>Posicionar o público como <strong>empresas B2B</strong> que precisam de software sob medida.</li>
+<li>Gerar <strong>leads qualificados</strong> via formulário de contato e WhatsApp.</li>
+<li>Transmitir <strong>credibilidade técnica</strong> (stack moderna, processo estruturado, cases com métricas).</li>
+<li>Cobrir o espectro de prazo: <strong>MVP em ~1 semana</strong> até <strong>projetos completos em fases</strong>.</li>
+</ul>
+<h3>Objetivos técnicos</h3>
+<ul>
+<li>Site <strong>rápido</strong>, <strong>estático</strong> na build, fácil de hospedar na Vercel.</li>
+<li>Código <strong>modular</strong>: conteúdo separado de apresentação.</li>
+<li>Tema <strong>dark premium</strong> (azul + preto), alinhado a referências B2B/SaaS (Vercel, Linear, Stripe dark).</li>
+<li>Base pronta para evoluir com páginas internas, blog e integração real de e-mail.</li>
+</ul>
+<hr>
+<h2>2. Estrutura de páginas</h2>
+<h3>Implementado hoje</h3>
+<table>
+<thead>
+<tr>
+<th>Rota</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/</code></td>
+<td>Single Page (landing)</td>
+<td>Home completa com âncoras internas</td>
+</tr>
+</tbody></table>
+<p>A home funciona como <strong>one-page</strong> com navegação por âncoras:</p>
+<table>
+<thead>
+<tr>
+<th>Âncora</th>
+<th>Seção</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>#servicos</code></td>
+<td>Serviços</td>
+</tr>
+<tr>
+<td><code>#processo</code></td>
+<td>Como trabalhamos</td>
+</tr>
+<tr>
+<td><code>#cases</code></td>
+<td>Cases / portfólio</td>
+</tr>
+<tr>
+<td><code>#faq</code></td>
+<td>Perguntas frequentes</td>
+</tr>
+<tr>
+<td><code>#contato</code></td>
+<td>Formulário + CTA</td>
+</tr>
+</tbody></table>
+<h3>Planejado (não implementado)</h3>
+<table>
+<thead>
+<tr>
+<th>Rota</th>
+<th>Prioridade</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/sobre</code></td>
+<td>Média</td>
+<td>História, equipe, valores</td>
+</tr>
+<tr>
+<td><code>/cases</code> ou <code>/cases/[slug]</code></td>
+<td>Média</td>
+<td>Listagem e detalhe de cases reais</td>
+</tr>
+<tr>
+<td><code>/blog</code></td>
+<td>Baixa</td>
+<td>Conteúdo SEO (artigos técnicos/comerciais)</td>
+</tr>
+<tr>
+<td><code>sitemap.xml</code> / <code>robots.txt</code></td>
+<td>Média</td>
+<td>Quando domínio final estiver definido</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>3. Conceito visual escolhido</h2>
+<p><strong>Conceito A — &quot;Enterprise Dark&quot;</strong></p>
+<p>Características:</p>
+<ul>
+<li>Fundo escuro predominante (preto azulado).</li>
+<li>Azul como cor de marca e destaque (CTAs, ícones, gradientes).</li>
+<li>Tipografia forte nos títulos, corpo legível e espaçamento generoso.</li>
+<li>Cards com borda sutil e <strong>glow azul no hover</strong>.</li>
+<li>Hero com <strong>grid de fundo</strong> + <strong>gradientes radiais</strong> discretos.</li>
+<li>Estética B2B/SaaS: profissional, técnica, sem parecer agência genérica colorida.</li>
+</ul>
+<p>Conceitos B (split hero com mockup) e C (minimal tipográfico) foram discutidos mas <strong>não implementados</strong>.</p>
+<hr>
+<h2>4. Cores</h2>
+<p>Definidas em <code>src/app/globals.css</code> via CSS variables.</p>
+<h3>Fundos e superfícies</h3>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Hex / valor</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--background</code></td>
+<td><code>#06080f</code></td>
+<td>Fundo principal da página</td>
+</tr>
+<tr>
+<td><code>--surface</code></td>
+<td><code>#0b101a</code></td>
+<td>Blocos, footer, cards escuros</td>
+</tr>
+<tr>
+<td><code>--surface-2</code></td>
+<td><code>#111827</code></td>
+<td>Variação de superfície</td>
+</tr>
+</tbody></table>
+<h3>Texto</h3>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Valor</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--foreground</code></td>
+<td><code>#e6edf7</code></td>
+<td>Texto principal</td>
+</tr>
+<tr>
+<td><code>--muted</code></td>
+<td><code>#94a3b8</code></td>
+<td>Subtítulos, descrições</td>
+</tr>
+</tbody></table>
+<h3>Marca (azul)</h3>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Hex</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--brand-300</code></td>
+<td><code>#93c5fd</code></td>
+<td>Eyebrows, acentos leves</td>
+</tr>
+<tr>
+<td><code>--brand-400</code></td>
+<td><code>#60a5fa</code></td>
+<td>Ícones, highlights</td>
+</tr>
+<tr>
+<td><code>--brand-500</code></td>
+<td><code>#3b82f6</code></td>
+<td>Gradientes</td>
+</tr>
+<tr>
+<td><code>--brand-600</code></td>
+<td><code>#2563eb</code></td>
+<td>Botões primários, logo</td>
+</tr>
+<tr>
+<td><code>--brand-700</code></td>
+<td><code>#1d4ed8</code></td>
+<td>Hover escuro</td>
+</tr>
+</tbody></table>
+<h3>Bordas</h3>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--border</code></td>
+<td><code>rgba(148, 163, 184, 0.12)</code></td>
+</tr>
+<tr>
+<td><code>--border-strong</code></td>
+<td><code>rgba(148, 163, 184, 0.22)</code></td>
+</tr>
+</tbody></table>
+<h3>Outros</h3>
+<ul>
+<li><strong>WhatsApp flutuante:</strong> <code>#25D366</code> (verde oficial).</li>
+<li><strong>Selection:</strong> fundo <code>brand-600</code>, texto branco.</li>
+</ul>
+<hr>
+<h2>5. Tipografia</h2>
+<table>
+<thead>
+<tr>
+<th>Papel</th>
+<th>Fonte</th>
+<th>Variável CSS</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Corpo</td>
+<td><strong>Inter</strong></td>
+<td><code>--font-inter</code></td>
+<td>Parágrafos, labels, UI</td>
+</tr>
+<tr>
+<td>Títulos</td>
+<td><strong>Plus Jakarta Sans</strong></td>
+<td><code>--font-jakarta</code></td>
+<td>Headlines, <code>font-display</code></td>
+</tr>
+</tbody></table>
+<p>Carregadas via <code>next/font/google</code> em <code>src/app/layout.tsx</code>.</p>
+<ul>
+<li>Títulos: <code>letter-spacing: -0.02em</code> (classe <code>.font-display</code>).</li>
+<li><code>text-wrap: balance</code> em headlines (classe <code>.text-balance</code>).</li>
+</ul>
+<hr>
+<h2>6. Seções da home (ordem na página)</h2>
+<ol>
+<li><strong>Navbar</strong> — Logo + nome Nkodex, links âncora, CTA &quot;Falar com especialista&quot;.</li>
+<li><strong>Hero</strong> — Headline, subtítulo, 2 CTAs, 3 bullets de credibilidade, faixa de tecnologias.</li>
+<li><strong>Serviços</strong> (<code>#servicos</code>) — Grid 3×2 com 6 cards.</li>
+<li><strong>Processo</strong> (<code>#processo</code>) — 5 etapas em timeline horizontal (responsivo empilha).</li>
+<li><strong>Cases</strong> (<code>#cases</code>) — Grid 2×2, 4 cases fictícios com tag &quot;Exemplo&quot;.</li>
+<li><strong>FAQ</strong> (<code>#faq</code>) — Accordion nativo (<code>&lt;details&gt;</code>), 6 perguntas.</li>
+<li><strong>CTA / Contato</strong> (<code>#contato</code>) — Bloco grande + formulário.</li>
+<li><strong>Footer</strong> — Marca, navegação, contato, copyright.</li>
+<li><strong>WhatsApp flutuante</strong> — Fixo canto inferior direito.</li>
+</ol>
+<hr>
+<h2>7. Componentes criados</h2>
+<h3>Layout (<code>src/components/layout/</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Arquivo</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Navbar</td>
+<td><code>Navbar.tsx</code></td>
+<td>Header sticky, navegação, CTA</td>
+</tr>
+<tr>
+<td>Footer</td>
+<td><code>Footer.tsx</code></td>
+<td>Rodapé com links e contato</td>
+</tr>
+</tbody></table>
+<h3>Seções (<code>src/components/sections/</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Arquivo</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hero</td>
+<td><code>Hero.tsx</code></td>
+<td>Hero + strip de stack</td>
+</tr>
+<tr>
+<td>Services</td>
+<td><code>Services.tsx</code></td>
+<td>Grid de serviços</td>
+</tr>
+<tr>
+<td>Process</td>
+<td><code>Process.tsx</code></td>
+<td>Etapas do processo</td>
+</tr>
+<tr>
+<td>Cases</td>
+<td><code>Cases.tsx</code></td>
+<td>Cards de portfólio</td>
+</tr>
+<tr>
+<td>Faq</td>
+<td><code>Faq.tsx</code></td>
+<td>Accordion FAQ</td>
+</tr>
+<tr>
+<td>Cta</td>
+<td><code>Cta.tsx</code></td>
+<td>Bloco de contato</td>
+</tr>
+<tr>
+<td>ContactForm</td>
+<td><code>ContactForm.tsx</code></td>
+<td>Formulário (Client Component)</td>
+</tr>
+</tbody></table>
+<h3>UI (<code>src/components/ui/</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Arquivo</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Button</td>
+<td><code>Button.tsx</code></td>
+<td>Botão/link com variantes primary/secondary/ghost</td>
+</tr>
+<tr>
+<td>Section</td>
+<td><code>Section.tsx</code></td>
+<td>Wrapper de seção + <code>SectionHeader</code></td>
+</tr>
+<tr>
+<td>WhatsAppButton</td>
+<td><code>WhatsAppButton.tsx</code></td>
+<td>FAB WhatsApp</td>
+</tr>
+</tbody></table>
+<h3>Página</h3>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>src/app/page.tsx</code></td>
+<td>Composição de todas as seções</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>8. Arquivos criados (detalhamento)</h2>
+<h3>Arquivos escritos/reescritos manualmente (site + docs)</h3>
+<pre><code>src/app/globals.css
+src/app/layout.tsx
+src/app/page.tsx
+src/lib/site.ts
+src/lib/utils.ts
+src/lib/content/services.ts
+src/lib/content/process.ts
+src/lib/content/cases.ts
+src/lib/content/faq.ts
+src/lib/content/stack.ts
+src/components/layout/Navbar.tsx
+src/components/layout/Footer.tsx
+src/components/sections/Hero.tsx
+src/components/sections/Services.tsx
+src/components/sections/Process.tsx
+src/components/sections/Cases.tsx
+src/components/sections/Faq.tsx
+src/components/sections/Cta.tsx
+src/components/sections/ContactForm.tsx
+src/components/ui/Button.tsx
+src/components/ui/Section.tsx
+src/components/ui/WhatsAppButton.tsx
+README.md
+PROJETO_NKODEX_CONTEXTO.md          ← este arquivo
+PROJETO_NKODEX_CONTEXTO.pdf         ← gerado a partir deste MD
+</code></pre>
+<p><strong>Total de arquivos de código/conteúdo custom:</strong> 22 em <code>src/</code> + 2–3 na raiz.</p>
+<h3>Arquivos gerados pelo scaffold (<code>create-next-app</code>)</h3>
+<pre><code>package.json
+package-lock.json
+next.config.ts
+tsconfig.json
+eslint.config.mjs
+postcss.config.mjs
+next-env.d.ts
+.gitignore
+AGENTS.md
+CLAUDE.md
+src/app/favicon.ico
+public/file.svg
+public/globe.svg
+public/next.svg
+public/vercel.svg
+public/window.svg
+</code></pre>
+<h3>Dependência adicionada manualmente</h3>
+<ul>
+<li><code>lucide-react</code> — ícones em todo o site.</li>
+</ul>
+<h3>Pastas geradas automaticamente (não versionar conteúdo)</h3>
+<ul>
+<li><code>node_modules/</code></li>
+<li><code>.next/</code></li>
+<li><code>.git/</code></li>
+</ul>
+<hr>
+<h2>9. Estrutura completa de pastas</h2>
+<pre><code>nkodex/
+├── .git/
+├── .gitignore
+├── .next/                          # build (gerado)
+├── node_modules/                   # dependências (gerado)
+├── AGENTS.md
+├── CLAUDE.md
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── PROJETO_NKODEX_CONTEXTO.md      # contexto para continuidade
+├── PROJETO_NKODEX_CONTEXTO.pdf     # export PDF do contexto
+├── README.md                       # documentação técnica completa
+├── tsconfig.json
+├── public/
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+└── src/
+    ├── app/
+    │   ├── favicon.ico
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
+    ├── components/
+    │   ├── layout/
+    │   │   ├── Footer.tsx
+    │   │   └── Navbar.tsx
+    │   ├── sections/
+    │   │   ├── Cases.tsx
+    │   │   ├── ContactForm.tsx
+    │   │   ├── Cta.tsx
+    │   │   ├── Faq.tsx
+    │   │   ├── Hero.tsx
+    │   │   ├── Process.tsx
+    │   │   └── Services.tsx
+    │   └── ui/
+    │       ├── Button.tsx
+    │       ├── Section.tsx
+    │       └── WhatsAppButton.tsx
+    └── lib/
+        ├── site.ts
+        ├── utils.ts
+        └── content/
+            ├── cases.ts
+            ├── faq.ts
+            ├── process.ts
+            ├── services.ts
+            └── stack.ts
+</code></pre>
+<hr>
+<h2>10. Decisões tomadas</h2>
+<h3>Produto e marca</h3>
+<table>
+<thead>
+<tr>
+<th>Decisão</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Público-alvo</td>
+<td><strong>B2B</strong> exclusivo</td>
+</tr>
+<tr>
+<td>Nome da marca</td>
+<td><strong>Nkodex</strong> (centralizado em <code>src/lib/site.ts</code>)</td>
+</tr>
+<tr>
+<td>Cases</td>
+<td>4 <strong>fictícios</strong> com <code>placeholder: true</code> + tag &quot;Exemplo&quot; na UI</td>
+</tr>
+<tr>
+<td>Prazo comercial</td>
+<td>De <strong>~1 semana</strong> (MVP) a projetos <strong>completos em fases</strong></td>
+</tr>
+<tr>
+<td>Propriedade do código</td>
+<td>Mensagem no FAQ: código pertence ao cliente</td>
+</tr>
+</tbody></table>
+<h3>Stack técnica</h3>
+<table>
+<thead>
+<tr>
+<th>Decisão</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Framework</td>
+<td><strong>Next.js 16.2.6</strong> (App Router)</td>
+</tr>
+<tr>
+<td>React</td>
+<td><strong>19.2.4</strong></td>
+</tr>
+<tr>
+<td>Linguagem</td>
+<td><strong>TypeScript</strong></td>
+</tr>
+<tr>
+<td>CSS</td>
+<td><strong>Tailwind CSS v4</strong> + variáveis CSS em <code>globals.css</code></td>
+</tr>
+<tr>
+<td>Ícones</td>
+<td><strong>lucide-react</strong></td>
+</tr>
+<tr>
+<td>Fontes</td>
+<td>Google Fonts: Inter + Plus Jakarta Sans</td>
+</tr>
+<tr>
+<td>Deploy recomendado</td>
+<td><strong>Vercel</strong></td>
+</tr>
+<tr>
+<td>Build</td>
+<td>Página <code>/</code> <strong>100% estática</strong> (SSG)</td>
+</tr>
+</tbody></table>
+<h3>UX e conversão</h3>
+<table>
+<thead>
+<tr>
+<th>Decisão</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Layout</td>
+<td><strong>Single-page</strong> com âncoras (Conceito A)</td>
+</tr>
+<tr>
+<td>Formulário</td>
+<td>Redireciona para <strong>WhatsApp</strong> com mensagem pré-formatada</td>
+</tr>
+<tr>
+<td>CTA principal</td>
+<td>&quot;Solicitar diagnóstico&quot;</td>
+</tr>
+<tr>
+<td>WhatsApp</td>
+<td>Botão flutuante fixo + link no footer</td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td>Primeira pergunta aberta por padrão (<code>open={index === 0}</code>)</td>
+</tr>
+</tbody></table>
+<h3>Arquitetura de código</h3>
+<table>
+<thead>
+<tr>
+<th>Decisão</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Conteúdo</td>
+<td>Arrays em <code>src/lib/content/*.ts</code></td>
+</tr>
+<tr>
+<td>Config global</td>
+<td><code>src/lib/site.ts</code></td>
+</tr>
+<tr>
+<td>Componentes</td>
+<td>Separados em <code>layout/</code>, <code>sections/</code>, <code>ui/</code></td>
+</tr>
+<tr>
+<td>Client Component</td>
+<td>Apenas <code>ContactForm.tsx</code> (estado de envio)</td>
+</tr>
+<tr>
+<td>Sem CMS</td>
+<td>Conteúdo em código por simplicidade no MVP</td>
+</tr>
+</tbody></table>
+<h3>SEO</h3>
+<table>
+<thead>
+<tr>
+<th>Decisão</th>
+<th>Detalhe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Idioma</td>
+<td><code>lang=&quot;pt-BR&quot;</code></td>
+</tr>
+<tr>
+<td>Metadata</td>
+<td>title template, description, keywords, OpenGraph, Twitter</td>
+</tr>
+<tr>
+<td>URL base</td>
+<td><code>https://nkodex.com.br</code> (placeholder)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>11. Conteúdo seed (resumo)</h2>
+<h3>Serviços (6)</h3>
+<ol>
+<li>Sistemas Web &amp; APIs  </li>
+<li>Aplicativos Mobile  </li>
+<li>Integrações &amp; ERPs  </li>
+<li>Automação de Processos  </li>
+<li>Manutenção &amp; Evolução  </li>
+<li>Consultoria Técnica</li>
+</ol>
+<h3>Processo (5 etapas)</h3>
+<p>Discovery → Proposta → Desenvolvimento → Entrega → Suporte</p>
+<h3>Cases fictícios (4)</h3>
+<table>
+<thead>
+<tr>
+<th>Cliente</th>
+<th>Setor</th>
+<th>Métrica</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Portal Logística Norte</td>
+<td>Transporte</td>
+<td>−35% ligações de suporte</td>
+</tr>
+<tr>
+<td>Clínica Integrada SA</td>
+<td>Saúde</td>
+<td>+28% ocupação na agenda</td>
+</tr>
+<tr>
+<td>Indústria Metal Prime</td>
+<td>Indústria</td>
+<td>Relatórios diários em minutos</td>
+</tr>
+<tr>
+<td>Rede Varejo Hub</td>
+<td>Varejo</td>
+<td>Sync em menos de 2s</td>
+</tr>
+</tbody></table>
+<h3>FAQ (6 perguntas)</h3>
+<p>Prazo, orçamento, tecnologias, manutenção, propriedade do código, sistemas legados.</p>
+<hr>
+<h2>12. Pendências</h2>
+<h3>Conteúdo e marca</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Definir <strong>nome da marca</strong> — <strong>Nkodex</strong> (aplicado em <code>site.ts</code> e textos).</li>
+<li><input disabled="" type="checkbox"> Criar <strong>logo</strong> definitivo (hoje: SVG &quot;N&quot; em gradiente azul).</li>
+<li><input disabled="" type="checkbox"> Substituir <strong>cases fictícios</strong> por cases reais em <code>src/lib/content/cases.ts</code>.</li>
+<li><input disabled="" type="checkbox"> Atualizar <strong>e-mail</strong>, <strong>WhatsApp</strong> (número real) e <strong>domínio</strong> em <code>site.ts</code>.</li>
+<li><input disabled="" type="checkbox"> Revisar copy (tom de voz, cidade no footer, CNPJ se aplicável).</li>
+</ul>
+<h3>Funcionalidades</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Integrar formulário com <strong>backend de e-mail</strong> (Resend, Formspree ou API Route).</li>
+<li><input disabled="" type="checkbox"> Criar páginas <code>/sobre</code> e <code>/cases/[slug]</code>.</li>
+<li><input disabled="" type="checkbox"> Adicionar <code>sitemap.ts</code> e <code>robots.ts</code> (App Router).</li>
+<li><input disabled="" type="checkbox"> Analytics (Plausible, Umami ou GA4).</li>
+<li><input disabled="" type="checkbox"> Imagem Open Graph customizada (<code>opengraph-image.tsx</code>).</li>
+</ul>
+<h3>Design</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Remover assets padrão do Next em <code>public/</code> (SVGs de template).</li>
+<li><input disabled="" type="checkbox"> Favicon personalizado.</li>
+<li><input disabled="" type="checkbox"> Menu mobile (hamburger) — hoje nav some em telas pequenas, só CTA &quot;Contato&quot;.</li>
+<li><input disabled="" type="checkbox"> Fotos reais da equipe ou ilustrações de marca.</li>
+</ul>
+<h3>DevOps</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Configurar repositório remoto e deploy na Vercel.</li>
+<li><input disabled="" type="checkbox"> Variáveis de ambiente quando houver API de e-mail.</li>
+<li><input disabled="" type="checkbox"> Resolver avisos <code>npm audit</code> (2 moderate — avaliar antes de <code>--force</code>).</li>
+</ul>
+<hr>
+<h2>13. Próximos passos (ordem sugerida)</h2>
+<ol>
+<li><strong>Configurar contatos reais</strong> — <code>src/lib/site.ts</code> (WhatsApp, e-mail, URL).</li>
+<li><strong>Trocar cases</strong> — editar <code>src/lib/content/cases.ts</code>, remover <code>placeholder: true</code>.</li>
+<li><del><strong>Definir nome da marca</strong></del> — concluído: <strong>Nkodex</strong>.</li>
+<li><strong>Deploy Vercel</strong> — conectar repo, apontar domínio.</li>
+<li><strong>Formulário com e-mail</strong> — API Route + Resend (ou Formspree).</li>
+<li><strong>Menu mobile</strong> — Navbar responsiva com drawer.</li>
+<li><strong>Página Sobre</strong> — reutilizar <code>Section</code> + <code>SectionHeader</code>.</li>
+<li><strong>SEO</strong> — sitemap, robots, OG image.</li>
+<li><strong>Analytics</strong> — após go-live.</li>
+<li><strong>Blog</strong> — quando houver estratégia de conteúdo.</li>
+</ol>
+<hr>
+<h2>14. Comandos úteis</h2>
+<pre><code class="language-bash">cd C:\Users\mari_\Projects\nkodex
+npm install
+npm run dev      # http://localhost:3000
+npm run build
+npm run start
+npm run lint
+</code></pre>
+<hr>
+<h2>15. Pontos de edição rápida</h2>
+<table>
+<thead>
+<tr>
+<th>O que mudar</th>
+<th>Arquivo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nome, contatos, nav</td>
+<td><code>src/lib/site.ts</code></td>
+</tr>
+<tr>
+<td>Serviços</td>
+<td><code>src/lib/content/services.ts</code></td>
+</tr>
+<tr>
+<td>Processo</td>
+<td><code>src/lib/content/process.ts</code></td>
+</tr>
+<tr>
+<td>Cases</td>
+<td><code>src/lib/content/cases.ts</code></td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td><code>src/lib/content/faq.ts</code></td>
+</tr>
+<tr>
+<td>Stack no hero</td>
+<td><code>src/lib/content/stack.ts</code></td>
+</tr>
+<tr>
+<td>Cores / tema</td>
+<td><code>src/app/globals.css</code></td>
+</tr>
+<tr>
+<td>SEO global</td>
+<td><code>src/app/layout.tsx</code></td>
+</tr>
+<tr>
+<td>Ordem das seções</td>
+<td><code>src/app/page.tsx</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>16. Histórico da conversa (contexto humano)</h2>
+<ul>
+<li>Usuário queria site para empresa de dev (sistemas, apps, soluções custom B2B).</li>
+<li>Escolheu <strong>Next.js</strong> (credibilidade técnica) em vez de site estático puro.</li>
+<li>Paleta <strong>azul + preto</strong>, público <strong>B2B</strong>, prazos de <strong>1 semana a projetos longos</strong>.</li>
+<li>Marca definitiva: <strong>Nkodex</strong>.</li>
+<li>Conceito visual: <strong>A — Enterprise Dark</strong>.</li>
+<li>Formulário via WhatsApp foi decisão de MVP (sem backend ainda).</li>
+</ul>
+<hr>
+<p><em>Documento gerado para continuidade do projeto. Manter atualizado a cada entrega relevante.</em></p>
+
+</body>
+</html>
