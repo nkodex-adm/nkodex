@@ -6,16 +6,12 @@ export function Process() {
     <Section id="processo">
       <SectionHeader
         eyebrow="Como trabalhamos"
-        title="Um processo claro do diagnóstico ao suporte"
-        description="Sem caixa preta. Você acompanha cada fase, vê o que está sendo construído e tem previsibilidade de prazo e investimento."
+        title="Um caminho claro, do diagnóstico à evolução"
+        description="Você acompanha cada etapa com transparência — entendemos a operação, implantamos com segurança e seguimos evoluindo junto com o negócio."
       />
 
-      <div className="relative mt-14">
-        <div
-          aria-hidden
-          className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-brand-500/40 to-transparent md:block"
-        />
-        <ol className="grid gap-6 md:grid-cols-5">
+      <div className="mt-8">
+        <ol className="grid gap-4 md:grid-cols-5">
           {processSteps.map((step) => {
             const Icon = step.icon;
             return (

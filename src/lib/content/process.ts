@@ -11,37 +11,37 @@ export type ProcessStep = {
 export const processSteps: ProcessStep[] = [
   {
     number: "01",
-    title: "Discovery",
+    title: "Entendemos sua operação",
     description:
-      "Entendemos o problema, mapeamos o fluxo atual e validamos hipóteses antes de uma única linha de código.",
+      "Mapeamos como sua empresa trabalha hoje, onde estão os gargalos e o que mais consome tempo da equipe.",
     icon: Compass,
   },
   {
     number: "02",
-    title: "Proposta",
+    title: "Desenhamos a solução",
     description:
-      "Escopo claro, prazo realista e investimento por fase. Sem surpresas no meio do projeto.",
+      "Planejamos um sistema alinhado aos seus processos, com escopo, prazo e investimento claros — sem surpresas.",
     icon: FileText,
   },
   {
     number: "03",
-    title: "Desenvolvimento",
+    title: "Desenvolvemos",
     description:
-      "Entregas iterativas em sprints curtas, com ambiente de homologação disponível para testes.",
+      "Transformamos o plano em um sistema funcional, com acompanhamento em cada etapa para você validar o caminho.",
     icon: Code,
   },
   {
     number: "04",
-    title: "Entrega",
+    title: "Implantamos",
     description:
-      "Deploy em produção, transferência de conhecimento e documentação do que foi construído.",
+      "Treinamos sua equipe, colocamos tudo em operação e garantimos que a transição seja segura e organizada.",
     icon: Rocket,
   },
   {
     number: "05",
-    title: "Suporte",
+    title: "Evoluímos junto com você",
     description:
-      "Acompanhamos a operação, evoluímos o produto e ficamos disponíveis para o que vier depois.",
+      "O sistema acompanha o crescimento da empresa: ajustes, melhorias e suporte contínuo conforme a operação muda.",
     icon: LifeBuoy,
   },
 ];

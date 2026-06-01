@@ -7,10 +7,10 @@ export function Faq() {
       <SectionHeader
         eyebrow="FAQ"
         title="Perguntas frequentes"
-        description="As dúvidas mais comuns de quem está avaliando começar um projeto com a gente."
+        description="Respostas diretas para quem está avaliando investir em mais controle e organização na operação."
       />
 
-      <div className="mx-auto mt-14 max-w-3xl space-y-3">
+      <div className="mx-auto mt-8 max-w-3xl space-y-3">
         {faq.map((item, index) => (
           <details
             key={item.question}

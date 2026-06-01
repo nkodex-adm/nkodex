@@ -10,47 +10,43 @@ export type Case = {
 
 export const cases: Case[] = [
   {
-    client: "Portal Logística Norte",
-    industry: "Transporte & Logística",
+    client: "Controle Financeiro e Operacional",
+    industry: "Financeiro",
     challenge:
-      "Operação atendia clientes via planilhas e ligações para checar status de entregas.",
+      "Recebimentos, pagamentos e fluxo de caixa espalhados em planilhas e anotações que não conversam entre si.",
     result:
-      "Portal com rastreamento em tempo real, integrado a três transportadoras.",
-    metric: "−35% em ligações de suporte",
-    stack: ["Next.js", "Node.js", "PostgreSQL"],
-    placeholder: true,
+      "Centralização de recebimentos, pagamentos, fluxo de caixa e indicadores em um único painel de gestão.",
+    metric: "Visão clara do caixa e do negócio",
+    stack: ["Fluxo de caixa", "Contas a pagar", "Indicadores"],
   },
   {
-    client: "Clínica Integrada SA",
-    industry: "Saúde",
+    client: "Gestão de Estoque",
+    industry: "Operações",
     challenge:
-      "Agendamento manual fragmentado entre WhatsApp, telefone e planilha por profissional.",
+      "Falta de visibilidade do que entra, sai e onde está cada item — gerando perdas, rupturas e compras no escuro.",
     result:
-      "Plataforma unificada de agendamento e prontuário com confirmações automáticas.",
-    metric: "+28% de ocupação na agenda",
-    stack: ["React", "NestJS", "PostgreSQL"],
-    placeholder: true,
+      "Controle de entradas, saídas e saldos com alertas e histórico para decisões mais seguras no dia a dia.",
+    metric: "Menos perdas e mais previsibilidade",
+    stack: ["Estoque", "Alertas", "Reposição"],
   },
   {
-    client: "Indústria Metal Prime",
+    client: "Produção e Operações",
     industry: "Indústria",
     challenge:
-      "Apontamentos de produção no papel, sem visibilidade do chão de fábrica em tempo real.",
+      "Ordens, apontamentos e acompanhamento do chão de fábrica feitos manualmente, sem visão do andamento real.",
     result:
-      "App para apontamento e dashboards com relatórios diários automatizados.",
-    metric: "Relatórios diários em minutos",
-    stack: ["React Native", "Node.js", "MongoDB"],
-    placeholder: true,
+      "Acompanhamento completo do processo produtivo, do pedido à entrega, com status visível para toda a equipe.",
+    metric: "Operação organizada ponta a ponta",
+    stack: ["Produção", "Ordens", "Acompanhamento"],
   },
   {
-    client: "Rede Varejo Hub",
-    industry: "Varejo",
+    client: "Atendimento e Relacionamento",
+    industry: "Comercial",
     challenge:
-      "Estoque desencontrado entre 14 lojas e o e-commerce gerava cancelamentos.",
+      "Histórico de clientes fragmentado entre WhatsApp, e-mail e anotações — lentidão e respostas inconsistentes.",
     result:
-      "Integração PDV + ERP + e-commerce com sincronização contínua de estoque.",
-    metric: "Sincronização em menos de 2s",
-    stack: ["TypeScript", "Redis", "RabbitMQ"],
-    placeholder: true,
+      "Histórico centralizado, mais agilidade para a equipe e atendimento mais profissional em cada contato.",
+    metric: "Equipe alinhada e cliente bem atendido",
+    stack: ["CRM", "Histórico", "Atendimento"],
   },
 ];

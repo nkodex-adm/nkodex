@@ -1,19 +1,31 @@
 import { TrendingUp } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { cases } from "@/lib/content/cases";
+import { caseMockups } from "@/lib/content/placeholders";
+import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
 export function Cases() {
   return (
     <Section id="cases">
       <SectionHeader
-        eyebrow="Cases"
-        title="Resultados que o software entrega"
-        description="Uma amostra de projetos que combinaram engenharia bem feita com um problema de negócio claro."
+        eyebrow="Aplicações"
+        title="Onde um sistema personalizado faz diferença"
+        description="Exemplos reais de situações que resolvemos — sem cases fictícios, foco no que importa para gestores e donos de negócio."
       />
 
-      <div className="mt-14 grid gap-4 md:grid-cols-2">
-        {cases.map((item) => (
-          <article key={item.client} className="card-surface group p-7">
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
+        {cases.map((item, index) => {
+          const mockup = caseMockups[index];
+          return (
+          <article key={item.client} className="card-surface group overflow-hidden">
+            {mockup ? (
+              <PlaceholderImage
+                asset={mockup}
+                className="aspect-[16/9] w-full border-b border-border-subtle"
+                showBadge
+              />
+            ) : null}
+            <div className="p-7">
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold uppercase tracking-wider text-brand-300">
                 {item.industry}
@@ -32,13 +44,13 @@ export function Cases() {
             <dl className="mt-5 space-y-4 text-sm">
               <div>
                 <dt className="text-xs font-medium uppercase tracking-wider text-muted">
-                  Desafio
+                  Situação comum
                 </dt>
                 <dd className="mt-1 text-foreground/90">{item.challenge}</dd>
               </div>
               <div>
                 <dt className="text-xs font-medium uppercase tracking-wider text-muted">
-                  O que fizemos
+                  O que o sistema entrega
                 </dt>
                 <dd className="mt-1 text-foreground/90">{item.result}</dd>
               </div>
@@ -60,8 +72,10 @@ export function Cases() {
                 ))}
               </ul>
             </div>
+            </div>
           </article>
-        ))}
+          );
+        })}
       </div>
     </Section>
   );

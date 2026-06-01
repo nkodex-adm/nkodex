@@ -7,11 +7,11 @@ import { siteConfig } from "@/lib/site";
 import { whatsappLink } from "@/lib/utils";
 
 const projectTypes = [
-  "Sistema web",
-  "Aplicativo mobile",
-  "Integração / API",
-  "Automação de processo",
-  "Manutenção / evolução",
+  "Sistema de gestão",
+  "Automação de processos",
+  "Aplicativo ou portal",
+  "Integração entre sistemas",
+  "Organizar operação atual",
   "Outro",
 ];
 
@@ -115,14 +115,14 @@ export function ContactForm() {
         <textarea
           name="message"
           rows={4}
-          placeholder="Qual problema você quer resolver?"
+          placeholder="O que mais atrapalha sua operação hoje?"
           required
           className="min-h-[110px] rounded-xl border border-border-strong bg-white/[0.03] px-3 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-brand-400/60 focus:bg-white/[0.05]"
         />
       </div>
 
       <Button size="lg" className="mt-2">
-        Enviar diagnóstico
+        Solicitar diagnóstico gratuito
         <ArrowRight className="h-4 w-4" />
       </Button>
       <p className="text-center text-xs text-muted">

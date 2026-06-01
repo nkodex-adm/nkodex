@@ -7,7 +7,7 @@ import { whatsappLink } from "@/lib/utils";
 export function Cta() {
   const { email, whatsapp, responseTime } = siteConfig.contact;
   return (
-    <Section id="contato" className="pb-24">
+    <Section id="contato">
       <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-surface/60 p-6 sm:p-10 lg:p-14">
         <div aria-hidden className="absolute inset-0 bg-radial-hero opacity-70" />
         <div className="relative grid gap-10 lg:grid-cols-2">
@@ -17,11 +17,11 @@ export function Cta() {
               Vamos conversar
             </div>
             <h2 className="font-display mt-4 text-balance text-3xl font-semibold sm:text-4xl">
-              Conte seu desafio. Voltamos com um diagnóstico em até 24h.
+              Sua empresa está perdendo tempo com controles manuais?
             </h2>
             <p className="mt-4 max-w-md text-balance text-muted">
-              Sem compromisso. Se fizer sentido, montamos uma proposta. Se não fizer,
-              te apontamos o melhor caminho mesmo assim.
+              Vamos conversar sobre como um sistema personalizado pode simplificar
+              sua operação. Diagnóstico gratuito, sem compromisso.
             </p>
 
             <ul className="mt-8 space-y-4 text-sm">

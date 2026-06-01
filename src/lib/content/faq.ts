@@ -5,33 +5,33 @@ export type FaqItem = {
 
 export const faq: FaqItem[] = [
   {
-    question: "Quanto tempo leva um projeto?",
+    question: "Quanto tempo leva para ter um sistema funcionando?",
     answer:
-      "Depende do escopo: temos entregas de MVP em cerca de 1 semana e sistemas completos que evoluem em fases ao longo de meses. No discovery definimos um cronograma realista por entrega.",
+      "Depende da complexidade da operação. Projetos mais enxutos podem entrar em uso em poucas semanas; sistemas completos evoluem por etapas, sempre com prazos combinados antes de começar. No diagnóstico inicial, você recebe uma visão realista do caminho.",
   },
   {
     question: "Como funciona o orçamento?",
     answer:
-      "O primeiro diagnóstico é gratuito. Depois, apresentamos uma proposta fechada por fase, com escopo, prazo e investimento claros. Sem cobranças surpresa no meio do projeto.",
+      "O primeiro diagnóstico é gratuito. Depois, apresentamos uma proposta fechada por etapa, com escopo, prazo e investimento claros. Sem cobranças surpresa no meio do caminho.",
   },
   {
-    question: "Quais tecnologias vocês utilizam?",
+    question: "Meu negócio é pequeno. Ainda faz sentido um sistema personalizado?",
     answer:
-      "Trabalhamos principalmente com TypeScript, Next.js, Node.js, React Native, Flutter, PostgreSQL e MongoDB. A escolha da stack é feita em função do problema, não da moda.",
+      "Sim, quando planilhas e controles manuais já não acompanham o volume ou a complexidade da operação. O sistema é desenhado para a sua realidade — sem funcionalidades desnecessárias e com espaço para crescer.",
   },
   {
-    question: "Vocês prestam manutenção após a entrega?",
+    question: "Vocês acompanham depois da implantação?",
     answer:
-      "Sim. Oferecemos planos de suporte com SLA, correções, evoluções e acompanhamento da operação após o go-live.",
+      "Sim. Oferecemos suporte, ajustes e evoluções conforme a operação muda. O objetivo é que o sistema continue útil mês após mês, não apenas no dia da entrega.",
   },
   {
-    question: "Quem é o dono do código?",
+    question: "O sistema fica com a minha empresa?",
     answer:
-      "Você. Todo o código-fonte, repositórios e credenciais ficam sob a sua propriedade desde o primeiro dia.",
+      "Sim. O sistema é seu: você mantém o controle, os acessos e a propriedade do que foi desenvolvido para o seu negócio.",
   },
   {
-    question: "Vocês assumem sistemas legados?",
+    question: "Já usamos planilhas e outras ferramentas. Preciso jogar tudo fora?",
     answer:
-      "Sim. Fazemos auditoria técnica, estabilizamos o que está em produção e evoluímos o sistema de forma incremental, sem big bang.",
+      "Não necessariamente. Muitas vezes o caminho é integrar o que já funciona, substituir o que gera retrabalho e organizar tudo em um fluxo mais claro — sem parar a operação do dia para o dia.",
   },
 ];

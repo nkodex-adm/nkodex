@@ -18,21 +18,21 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Sistemas e apps sob medida para empresas`,
+    default: `${siteConfig.name} — Sistemas personalizados para empresas`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
-    "desenvolvimento de sistemas",
-    "desenvolvimento de apps",
+    "sistema de gestão",
+    "sistema personalizado",
+    "automação de processos",
+    "controle empresarial",
     "software sob medida",
-    "soluções personalizadas",
-    "integrações de sistemas",
-    "automação empresarial",
-    "B2B",
+    "organização empresarial",
+    "produtividade empresarial",
   ],
   openGraph: {
-    title: `${siteConfig.name} — Software sob medida para B2B`,
+    title: `${siteConfig.name} — Mais controle e produtividade para sua empresa`,
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Software sob medida para B2B`,
+    title: `${siteConfig.name} — Mais controle e produtividade para sua empresa`,
     description: siteConfig.description,
   },
 };

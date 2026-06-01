@@ -10,7 +10,7 @@ type SectionProps = {
 
 export function Section({ id, children, className, containerClassName }: SectionProps) {
   return (
-    <section id={id} className={cn("relative py-20 sm:py-28", className)}>
+    <section id={id} className={cn("relative py-8 sm:py-12", className)}>
       <div
         className={cn(
           "mx-auto w-full max-w-6xl px-6 sm:px-8",
@@ -53,11 +53,11 @@ export function SectionHeader({
           {eyebrow}
         </div>
       ) : null}
-      <h2 className="font-display mt-4 text-balance text-3xl font-semibold sm:text-4xl md:text-5xl">
+      <h2 className="font-display mt-3 text-balance text-3xl font-semibold sm:text-4xl md:text-5xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-balance text-base text-muted sm:text-lg">
+        <p className="mt-3 text-balance text-base text-muted sm:text-lg">
           {description}
         </p>
       ) : null}

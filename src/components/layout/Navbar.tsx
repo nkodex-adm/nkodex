@@ -25,7 +25,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <Button href="#contato" size="md" className="hidden sm:inline-flex">
-            Falar com especialista
+            Diagnóstico gratuito
           </Button>
           <Button href="#contato" size="md" className="sm:hidden">
             Contato
