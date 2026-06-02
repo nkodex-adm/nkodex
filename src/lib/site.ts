@@ -11,7 +11,7 @@ export const siteConfig = {
     "A Nkodex desenvolve sistemas sob medida para centralizar informações, automatizar processos e dar mais controle à operação da sua empresa — do diagnóstico à implantação e evolução contínua.",
   url: "https://nkodex.com.br",
   contact: {
-    email: "contato@nkodex.com.br",
+    email: "suporte@nkodex.com.br",
     whatsapp: {
       number: "5500000000000",
       display: "+55 (00) 00000-0000",
