@@ -13,8 +13,8 @@ export const siteConfig = {
   contact: {
     email: "suporte@nkodex.com.br",
     whatsapp: {
-      number: "5500000000000",
-      display: "+55 (00) 00000-0000",
+      number: "5515996557064",
+      display: "(15) 99655-7064",
       message: "Olá! Vim pelo site da Nkodex e quero conversar sobre um sistema personalizado.",
     },
     responseTime: "Respondemos em até 24h úteis",
