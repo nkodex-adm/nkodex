@@ -1,11 +1,11 @@
-import { Clock, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { siteConfig } from "@/lib/site";
 import { whatsappLink } from "@/lib/utils";
 
 export function Cta() {
-  const { email, whatsapp, responseTime } = siteConfig.contact;
+  const { email, whatsapp } = siteConfig.contact;
   return (
     <Section id="contato">
       <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-surface/60 p-6 sm:p-10 lg:p-14">
@@ -25,12 +25,6 @@ export function Cta() {
             </p>
 
             <ul className="mt-8 space-y-4 text-sm">
-              <li className="flex items-center gap-3">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-600/15 text-brand-300 ring-1 ring-brand-500/30">
-                  <Clock className="h-4 w-4" />
-                </span>
-                {responseTime}
-              </li>
               <li className="flex items-center gap-3">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-600/15 text-brand-300 ring-1 ring-brand-500/30">
                   <Mail className="h-4 w-4" />

@@ -6,7 +6,6 @@ import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
 const highlights = [
   "Diagnóstico gratuito e sem compromisso",
-  "Resposta em até 24h úteis",
   "Feito para a realidade da sua operação",
 ];
 

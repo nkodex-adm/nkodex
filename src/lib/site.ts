@@ -17,14 +17,8 @@ export const siteConfig = {
       display: "(15) 99655-7064",
       message: "Olá! Vim pelo site da Nkodex e quero conversar sobre um sistema personalizado.",
     },
-    responseTime: "Respondemos em até 24h úteis",
   },
-  nav: [
-    { label: "Serviços", href: "#servicos" },
-    { label: "Processo", href: "#processo" },
-    { label: "Aplicações", href: "#cases" },
-    { label: "FAQ", href: "#faq" },
-  ],
+  nav: [{ label: "FAQ", href: "#faq" }],
 } as const;
 
 export type SiteConfig = typeof siteConfig;
