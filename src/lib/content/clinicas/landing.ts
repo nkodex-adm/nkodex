@@ -1,29 +1,15 @@
 export const clinicasLanding = {
   meta: {
-    title: "Sistemas para clínicas — Nkodex",
+    title: "Organização para clínicas | Nkodex",
     description:
-      "Diagnóstico gratuito para clínicas que precisam organizar agenda, pacientes, financeiro e equipe em um sistema feito para a rotina real da operação.",
+      "Diagnóstico gratuito para clínicas de estética, odontologia e nutrição que precisam de mais controle na agenda, nos pacientes, no financeiro e na equipe.",
   },
   hero: {
-    eyebrow: "Clínicas e consultórios",
+    eyebrow: "Clínicas e Consultórios",
     title: "Sua clínica cresceu, mas o controle da operação não acompanhou?",
     titleHighlight: "não acompanhou?",
     description:
-      "Agenda, pacientes, financeiro e equipe espalhados em planilhas, WhatsApp e anotações soltas — gerando retrabalho, falhas no atendimento e perda de receita.",
-    primaryCta: "Solicitar diagnóstico gratuito",
-    secondaryCta: "Entender como funciona",
-    secondaryHref: "#diagnostico",
-    highlights: [
-      "Diagnóstico gratuito e sem compromisso",
-      "Feito para a rotina real da clínica",
-    ],
-  },
-  heroVideo: {
-    eyebrow: "Clínicas e consultórios",
-    title: "Sua clínica cresceu, mas o controle da operação não acompanhou?",
-    titleHighlight: "não acompanhou?",
-    description:
-      "Organize agenda, pacientes, financeiro, equipe e indicadores em uma plataforma criada para a rotina da sua clínica.",
+      "Organize agenda, pacientes, financeiro, equipe e indicadores com mais clareza, do jeito que a rotina da sua clínica pede.",
     primaryCta: "Quero organizar minha clínica",
     secondaryCta: "Ver como funciona",
     secondaryHref: "#diagnostico",
@@ -33,11 +19,36 @@ export const clinicasLanding = {
     ],
     videoSrc: "/videos/clinicas-hero-bg.mp4",
   },
-  dores: {
-    eyebrow: "O que trava o dia a dia",
-    title: "Os problemas que mais aparecem em clínicas em crescimento",
+  nav: [
+    { label: "Problemas", href: "#problemas" },
+    { label: "Solução", href: "#solucao" },
+    { label: "Diferenciais", href: "#diferenciais" },
+    { label: "Diagnóstico", href: "#diagnostico" },
+    { label: "Contato", href: "#contato" },
+  ],
+  footerTagline: "Sistemas sob medida para empresas brasileiras.",
+  provaSocial: {
+    title: "Clínicas que já decidiram organizar sua operação",
     description:
-      "Quando a operação cresce mais rápido que o controle, pequenas falhas viram rotina — e começam a consumir tempo, dinheiro e energia da equipe.",
+      "Da recepção ao financeiro, clínicas de diferentes especialidades já utilizam a Nkodex para ganhar mais controle sobre a rotina.",
+    logos: [
+      {
+        src: "/logo-clinica-lange.png",
+        alt: "Logo Clínica Lange",
+        fileName: "logo-clinica-lange.png",
+      },
+      {
+        src: "/logo-loveena.png",
+        alt: "Logo Loveena",
+        fileName: "logo-loveena.png",
+      },
+    ],
+  },
+  dores: {
+    eyebrow: "O dia a dia da clínica",
+    title: "Falhas na rotina que limitam o crescimento da clínica",
+    description:
+      "Quando a operação cresce mais rápido que a organização, pequenas falhas se transformam em perda de tempo, retrabalho e decisões sem visibilidade.",
     items: [
       {
         title: "Agenda desorganizada",
@@ -47,12 +58,12 @@ export const clinicasLanding = {
       {
         title: "Histórico do paciente fragmentado",
         description:
-          "Informações espalhadas entre anotações, planilhas e conversas — dificultando continuidade no atendimento.",
+          "Informações espalhadas entre anotações, planilhas e conversas, dificultando a continuidade no atendimento.",
       },
       {
         title: "Financeiro sem visão real",
         description:
-          "Recebimentos, repasses e despesas controlados de formas diferentes, sem um painel confiável do caixa.",
+          "Recebimentos, repasses e despesas controlados de formas diferentes, sem uma visão confiável do caixa.",
       },
       {
         title: "Equipe sem processo claro",
@@ -60,49 +71,131 @@ export const clinicasLanding = {
           "Cada pessoa faz do seu jeito. Falta padrão, falta rastreio e tudo volta para o dono ou gestor.",
       },
       {
-        title: "Dependência do dono da clínica",
+        title: "Pacientes sem retorno",
         description:
-          "Decisões, cobranças e organização centralizadas em uma pessoa — limitando crescimento e qualidade de vida.",
+          "Oportunidades perdidas por falta de acompanhamento após o atendimento.",
       },
       {
-        title: "Retrabalho que não aparece na planilha",
+        title: "Informações duplicadas",
         description:
-          "Conferências manuais, informações repetidas e tarefas que poderiam ser automáticas consumindo o dia.",
+          "A mesma informação sendo registrada em vários lugares diferentes.",
       },
     ],
   },
   consequencias: {
-    eyebrow: "O custo invisível",
-    title: "Quando o controle falta, a operação paga a conta",
+    eyebrow: "O que fica para trás",
+    title: "Quando falta organização, a clínica sente no bolso e no atendimento",
     description:
-      "Sem um sistema alinhado à rotina da clínica, os problemas não ficam só no operacional — eles afetam receita, experiência do paciente e capacidade de crescer.",
+      "Sem uma operação alinhada, os problemas não ficam só no bastidor. Eles afetam receita, experiência do paciente e a capacidade de crescer com tranquilidade.",
     items: [
       "Horários ociosos e agenda mal aproveitada",
-      "Pacientes sem retorno ou follow-up consistente",
+      "Pacientes sem retorno ou acompanhamento consistente",
       "Erros e atrasos no controle financeiro",
-      "Equipe sobrecarregada com tarefas repetitivas",
       "Decisões importantes tomadas no escuro",
-      "Sensação constante de apagar incêndio",
+    ],
+  },
+  operacaoAreas: {
+    eyebrow: "Na rotina da clínica",
+    title: "Tudo o que sua clínica precisa para operar com mais controle",
+    description:
+      "Centralize as áreas que mais impactam o dia a dia, com clareza para quem gerencia estética, odontologia, nutrição e outras especialidades.",
+    items: [
+      {
+        title: "Agenda organizada",
+        description:
+          "Confirmações, ocupação da agenda e acompanhamento dos atendimentos.",
+      },
+      {
+        title: "Histórico do paciente",
+        description:
+          "Informações organizadas e acessíveis para toda a equipe.",
+      },
+      {
+        title: "Controle financeiro",
+        description:
+          "Recebimentos, despesas, repasses e visão clara dos resultados.",
+      },
+      {
+        title: "Metas e comissões",
+        description: "Acompanhamento da equipe e incentivos de desempenho.",
+      },
+      {
+        title: "Orçamentos e tratamentos",
+        description: "Registro de propostas e acompanhamento da conversão.",
+      },
+      {
+        title: "Indicadores da operação",
+        description: "Dados importantes para decisões mais seguras.",
+      },
+    ],
+  },
+  carousel: {
+    eyebrow: "Rotina da clínica",
+    title: "Mais organização em cada parte da operação",
+    description:
+      "Visualize como fica o dia a dia quando a clínica ganha previsibilidade.",
+    items: [
+      {
+        title: "Recepção organizada",
+        chip: "Fluxo",
+        description: "Atendimento fluido desde a chegada do paciente.",
+        image: "/clinica-recepcao.jpg",
+        alt: "Lobby premium de clínica de estética",
+      },
+      {
+        title: "Agenda sob controle",
+        chip: "Organização",
+        description: "Horários claros, confirmações e menos ociosidade.",
+        image: "/clinica-agenda.jpg",
+        alt: "Recepcionista organizando agenda com tablet",
+      },
+      {
+        title: "Paciente acompanhado",
+        chip: "Gestão",
+        description: "Histórico acessível e continuidade no cuidado.",
+        image: "/clinica-paciente.jpg",
+        alt: "Profissional em avaliação estética com paciente",
+      },
+      {
+        title: "Financeiro previsível",
+        chip: "Controle",
+        description: "Caixa, repasses e resultados visíveis para decidir melhor.",
+        image: "/clinica-financeiro.jpg",
+        alt: "Gestora analisando resultados da clínica",
+      },
+      {
+        title: "Equipe alinhada",
+        chip: "Operação",
+        description: "Todos sabem o que fazer e quando fazer.",
+        image: "/clinica-equipe.jpg",
+        alt: "Equipe da clínica em alinhamento interno",
+      },
+      {
+        title: "Indicadores em tempo real",
+        chip: "Rotina real",
+        description: "Números que ajudam a crescer com mais segurança.",
+        image:
+          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+        alt: "Gestão estratégica com indicadores da clínica",
+      },
     ],
   },
   posicionamento: {
-    eyebrow: "A solução",
-    title: "Um sistema feito para a rotina real da sua clínica",
+    eyebrow: "O caminho",
+    title: "Organização feita para a rotina real da sua clínica",
     description:
-      "A Nkodex não vende um pacote genérico de software. Desenvolvemos sistemas personalizados para centralizar informações, organizar processos e dar mais controle à operação — do jeito que sua clínica realmente funciona.",
+      "Não partimos de um pacote pronto. Entendemos como sua clínica funciona e construímos a organização que ela precisa, com mais controle, menos retrabalho e informação no lugar certo.",
     bullets: [
       "Agenda, pacientes e financeiro conectados",
       "Menos retrabalho para recepção e gestão",
-      "Informações centralizadas para a equipe",
-      "Indicadores para decidir com mais segurança",
       "Evolução conforme a clínica cresce",
     ],
   },
   autoridade: {
-    eyebrow: "Por que a Nkodex",
-    title: "Quem entende operação, não só software",
+    eyebrow: "Parceria na gestão",
+    title: "Quem entende a rotina de clínicas, não só a parte técnica",
     description:
-      "Trabalhamos com empresas que precisam sair do controle manual e ganhar previsibilidade. Nossa abordagem começa pelo diagnóstico da operação — não por uma lista de funcionalidades.",
+      "Trabalhamos com clínicas que precisam sair do controle manual e ganhar previsibilidade. Começamos pelo diagnóstico da operação, não por uma lista de funcionalidades.",
     items: [
       {
         title: "Diagnóstico antes de qualquer proposta",
@@ -110,19 +203,14 @@ export const clinicasLanding = {
           "Entendemos como a clínica funciona hoje antes de sugerir caminhos. Sem promessas genéricas.",
       },
       {
-        title: "Sistema sob medida, sem excesso",
+        title: "Organização sob medida, sem excesso",
         description:
-          "O que faz sentido para a sua rotina entra primeiro. Sem módulos desnecessários.",
+          "O que faz sentido para a sua rotina entra primeiro. Sem etapas ou ferramentas desnecessárias.",
       },
       {
-        title: "Implantação por etapas",
+        title: "Acompanhamento contínuo",
         description:
-          "Evolução com prazos claros, para a operação não parar do dia para o dia.",
-      },
-      {
-        title: "Acompanhamento após a entrega",
-        description:
-          "Ajustes e melhorias conforme a clínica muda — o sistema precisa continuar útil mês após mês.",
+          "Ajustes e melhorias conforme a clínica muda. A organização precisa continuar útil mês após mês.",
       },
     ],
   },
@@ -130,7 +218,7 @@ export const clinicasLanding = {
     eyebrow: "Diagnóstico gratuito",
     title: "Como funciona o diagnóstico da sua clínica",
     description:
-      "Um primeiro passo objetivo para entender onde estão os gargalos e o que um sistema personalizado pode resolver — sem compromisso.",
+      "Um primeiro passo objetivo para entender onde estão os gargalos e o que pode ser organizado de forma mais clara, sem compromisso.",
     steps: [
       {
         number: "01",
@@ -154,7 +242,7 @@ export const clinicasLanding = {
         number: "04",
         title: "Sem pressão",
         description:
-          "O diagnóstico é gratuito. Você decide se e quando quer avançar — com informação, não com empurrão.",
+          "O diagnóstico é gratuito. Você decide se e quando quer avançar, com informação, não com empurrão.",
       },
     ],
   },

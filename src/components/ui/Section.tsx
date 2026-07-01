@@ -23,6 +23,31 @@ export function Section({ id, children, className, containerClassName }: Section
   );
 }
 
+type SectionEyebrowProps = {
+  children: ReactNode;
+  className?: string;
+  uppercase?: boolean;
+};
+
+export function SectionEyebrow({
+  children,
+  className,
+  uppercase = true,
+}: SectionEyebrowProps) {
+  return (
+    <div
+      className={cn(
+        "inline-flex items-center gap-2 rounded-full border border-border-strong bg-white/5 px-3 py-1 text-xs font-medium tracking-wider text-brand-300",
+        uppercase && "uppercase",
+        className,
+      )}
+    >
+      <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
+      {children}
+    </div>
+  );
+}
+
 type SectionHeaderProps = {
   eyebrow?: string;
   title: ReactNode;
@@ -43,16 +68,7 @@ export function SectionHeader({
         align === "center" ? "mx-auto text-center" : "text-left",
       )}
     >
-      {eyebrow ? (
-        <div
-          className={cn(
-            "inline-flex items-center gap-2 rounded-full border border-border-strong bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-300",
-          )}
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
-          {eyebrow}
-        </div>
-      ) : null}
+      {eyebrow ? <SectionEyebrow>{eyebrow}</SectionEyebrow> : null}
       <h2 className="font-display mt-3 text-balance text-3xl font-semibold sm:text-4xl md:text-5xl">
         {title}
       </h2>

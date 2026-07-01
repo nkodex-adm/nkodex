@@ -7,7 +7,7 @@ const { posicionamento } = clinicasLanding;
 export function ClinicasPosicionamento() {
   return (
     <Section id="solucao">
-      <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-surface/60 p-6 sm:p-10 lg:p-14">
+      <div className="relative overflow-hidden rounded-3xl clinicas-highlight-card p-6 sm:p-10 lg:p-14">
         <div aria-hidden className="absolute inset-0 bg-radial-hero opacity-70" />
         <div className="relative mx-auto max-w-3xl text-center">
           <SectionHeader

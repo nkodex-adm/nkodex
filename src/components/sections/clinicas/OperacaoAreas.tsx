@@ -1,10 +1,9 @@
 import {
-  AlertCircle,
-  CalendarX2,
+  BarChart3,
+  CalendarCheck,
   ClipboardList,
-  Copy,
-  MessageSquareWarning,
-  UserRound,
+  FileText,
+  Target,
   Wallet,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -12,28 +11,28 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { clinicasLanding } from "@/lib/content/clinicas/landing";
 
 const icons: LucideIcon[] = [
-  CalendarX2,
+  CalendarCheck,
   ClipboardList,
   Wallet,
-  MessageSquareWarning,
-  UserRound,
-  Copy,
+  Target,
+  FileText,
+  BarChart3,
 ];
 
-const { dores } = clinicasLanding;
+const { operacaoAreas } = clinicasLanding;
 
-export function ClinicasDores() {
+export function ClinicasOperacaoAreas() {
   return (
-    <Section id="problemas">
+    <Section>
       <SectionHeader
-        eyebrow={dores.eyebrow}
-        title={dores.title}
-        description={dores.description}
+        eyebrow={operacaoAreas.eyebrow}
+        title={operacaoAreas.title}
+        description={operacaoAreas.description}
       />
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {dores.items.map((item, index) => {
-          const Icon = icons[index] ?? AlertCircle;
+        {operacaoAreas.items.map((item, index) => {
+          const Icon = icons[index] ?? CalendarCheck;
           return (
             <article key={item.title} className="card-surface p-6">
               <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600/10 text-brand-600 ring-1 ring-brand-600/15">

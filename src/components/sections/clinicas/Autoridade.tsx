@@ -5,14 +5,14 @@ const { autoridade } = clinicasLanding;
 
 export function ClinicasAutoridade() {
   return (
-    <Section id="autoridade">
+    <Section id="diferenciais">
       <SectionHeader
         eyebrow={autoridade.eyebrow}
         title={autoridade.title}
         description={autoridade.description}
       />
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2">
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {autoridade.items.map((item) => (
           <article key={item.title} className="card-surface p-6">
             <h3 className="font-display text-lg font-semibold">{item.title}</h3>
