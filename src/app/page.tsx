@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -7,6 +8,13 @@ import { Cases } from "@/components/sections/Cases";
 import { Faq } from "@/components/sections/Faq";
 import { Cta } from "@/components/sections/Cta";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 
 export default function Home() {
   return (

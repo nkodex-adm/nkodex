@@ -1,3 +1,16 @@
+const DEFAULT_SITE_URL = "https://www.nkodex.com.br";
+
+function normalizeSiteUrl(url: string): string {
+  return url.replace(/\/$/, "");
+}
+
+/** URL pública do site — definir NEXT_PUBLIC_SITE_URL em produção. */
+export function getSiteUrl(): string {
+  return normalizeSiteUrl(
+    process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_URL,
+  );
+}
+
 export const siteConfig = {
   name: "Nkodex",
   logo: {
@@ -9,7 +22,7 @@ export const siteConfig = {
     "Sistemas personalizados para empresas que precisam de mais controle, produtividade e organização.",
   description:
     "A Nkodex desenvolve sistemas sob medida para centralizar informações, automatizar processos e dar mais controle à operação da sua empresa — do diagnóstico à implantação e evolução contínua.",
-  url: "https://nkodex.com.br",
+  url: getSiteUrl(),
   contact: {
     email: "suporte@nkodex.com.br",
     whatsapp: {

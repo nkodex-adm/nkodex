@@ -13,14 +13,21 @@ import { ClinicasAutoridade } from "@/components/sections/clinicas/Autoridade";
 import { ClinicasDiagnostico } from "@/components/sections/clinicas/Diagnostico";
 import { ClinicasCtaFinal } from "@/components/sections/clinicas/CtaFinal";
 import { clinicasLanding } from "@/lib/content/clinicas/landing";
+import { siteConfig } from "@/lib/site";
 import "./clinicas-theme.css";
+
+const clinicasUrl = `${siteConfig.url}/clinicas`;
 
 export const metadata: Metadata = {
   title: clinicasLanding.meta.title,
   description: clinicasLanding.meta.description,
+  alternates: {
+    canonical: clinicasUrl,
+  },
   openGraph: {
     title: clinicasLanding.meta.title,
     description: clinicasLanding.meta.description,
+    url: clinicasUrl,
   },
 };
 
