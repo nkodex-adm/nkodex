@@ -22,7 +22,6 @@ export function Cases() {
               <PlaceholderImage
                 asset={mockup}
                 className="aspect-[16/9] w-full border-b border-border-subtle"
-                showBadge
               />
             ) : null}
             <div className="p-7">
