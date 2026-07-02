@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — Mais controle e produtividade para sua empresa`,
     description: siteConfig.description,
   },
+  verification: {
+    google: "XiAb7uL8HWjvC2aYuecHnxld6s-FhEsrz-Jx8Lnt27I",
+  },
 };
 
 export default function RootLayout({
